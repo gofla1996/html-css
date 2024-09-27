@@ -4,13 +4,88 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>이미지 | Techit</title>
+    <style>
+      /* svg-img 클래스가 적용된 이미지 크기의 가로 크기를 50px로 지정하기 위한 CSS 선언 */
+      .svg-img {
+        width: 50px;
+      }
+    </style>
   </head>
   <body>
     <h1>이미지 삽입하기</h1>
     <!-- 이미지 리소스를 삽입할 때는 img 태그를 사용할 수 있으며 리소스는 src 속성으로 이미지 설명은 alt 속성으로 지정 -->
     <!-- 상대경로 방식으로 이미지 리소스를 지정 -->
-    <img src="./../assets/food/icecream.webp" alt="" />
+    <img
+      src="./../assets/food/icecream.webp"
+      alt="[벤앤제리스] 파인트 아이스크림 6종"
+    />
     <!-- 절대경로 방식으로 이미지 리소스를 지정 -->
-    <img src="/src/assets/food/icecream.webp" alt="" />
+    <img
+      src="/src/assets/food/icecream.webp"
+      alt="[벤앤제리스] 파인트 아이스크림 6종"
+    />
+    <!-- 벡터 이미지 삽입하기 (img 요소를 사용할 경우) -->
+    <img class="svg-img" src="./../assets/svg/chitchat.svg" alt="1대1 채팅" />
+
+    <!-- 벡터 이미지 삽입하기 (svg 요소를 사용할 경우) -->
+    <!-- SVG 요소 내부에 title 요소로 제목을 지정한 후 id 값을 SVG 요소에 aria-labelledby 속성의 값으로 지정 -->
+    <svg
+      class="svg-img"
+      viewBox="0 0 40 40"
+      xmlns="http://www.w3.org/2000/svg"
+      aria-labelledby="message"
+    >
+      <title id="message">메시지</title>
+      <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
+          <stop stop-color="#2397B3" offset="0%"></stop>
+          <stop stop-color="#13577E" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="b">
+          <stop stop-color="#73DFF2" offset="0%"></stop>
+          <stop stop-color="#47B1EB" offset="100%"></stop>
+        </linearGradient>
+      </defs>
+      <g fill="none" fill-rule="evenodd">
+        <path
+          d="M28.872 22.096c.084.622.128 1.258.128 1.904 0 7.732-6.268 14-14 14-2.176 0-4.236-.496-6.073-1.382l-6.022 2.007c-1.564.521-3.051-.966-2.53-2.53l2.007-6.022A13.944 13.944 0 0 1 1 24c0-7.331 5.635-13.346 12.81-13.95A9.967 9.967 0 0 0 13 14c0 5.523 4.477 10 10 10a9.955 9.955 0 0 0 5.872-1.904z"
+          fill="url(#a)"
+          transform="translate(1 1)"
+        ></path>
+        <path
+          d="M35.618 20.073l2.007 6.022c.521 1.564-.966 3.051-2.53 2.53l-6.022-2.007A13.944 13.944 0 0 1 23 28c-7.732 0-14-6.268-14-14S15.268 0 23 0s14 6.268 14 14c0 2.176-.496 4.236-1.382 6.073z"
+          fill="url(#b)"
+          transform="translate(1 1)"
+        ></path>
+        <path
+          d="M18 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM24 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4zM30 17a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"
+          fill="#FFF"
+        ></path>
+      </g>
+    </svg>
+    <!-- horizontal ruler -->
+    <hr />
+    <!-- 피규어 요소를 사용하여 이미지 콘텐츠와 이미지 캡션 마크업 -->
+    <figure>
+      <img src="./../assets/drama/culinary-class-wars-narrow.jpg" alt="" />
+      <figcaption>흑백요리사</figcaption>
+    </figure>
+    <figure>
+      <!-- 스크린 리더가 이미지의 대체 텍스트를 읽지 않도록 하고 싶으면 alt 속성을 공란으로 둔다. -->
+      <img src="./../assets/drama/good-partner-wide.webp" alt="" />
+      <figcaption>굿 파트너</figcaption>
+    </figure>
+
+    <!-- Lazy Loading (지연 로딩) -->
+    <img
+      src="./../assets/drama/mom-friend-son-narrow.webp"
+      alt="엄마 친구 아들"
+      loadin="lazy"
+    />
+    <img
+      src="./../assets/drama/mom-friend-son-wide.webp"
+      alt="엄마 친구 아들"
+      loadin="lazy"
+    />
   </body>
 </html>
