@@ -10,21 +10,40 @@
     <h1 id="heading">하이퍼링크 요소</h1>
 
     <!-- 웹사이트(URL)로 하이퍼링크 : 절대경로 -->
-    <a href="https://likelion.net/school">태킷 프론트엔드 스쿨(부트캠프)</a>
-    <br />
+    <p>
+      <a href="https://likelion.net/school">태킷 프론트엔드 스쿨(부트캠프)</a>
+    </p>
 
-    <!-- target="_blank" 새 창에서 열기 -->
+    <!-- target 속성의 값으로 _blank를 지정하면 새창, 새탭에 링크 결과 보기 -->
     <!-- 그냥 blank로 지정하면 blank라는 이름의 탭에 열어줌 -->
-    <a href="https://github.com/gofla1996" target="_blank">혜림님의 Github</a>
-    <br />
+    <!-- target 속성의 값으로 _blank로 설정되어 있을 경우에는 rel 속성의 값으로 noopener nooferrer를 지정해야 함. 
+      https://velog.io/@parkseonup/noopener%EC%99%80-noreferrer 
+    -->
+    <a href="https://github.com/gofla1996" target="_blank"
+      ><p>혜림님의 Github</p></a
+    >
+
+    <!-- 인터랙티브 모델 안에 또다른 인터랙티브 모델을 넣으면 에러가 난다(a 태그 안에 자식 요소로 버튼이 들어가있는 경우 등) -->
+    <p>
+      <a href="https://github.com/gofla1996/homework"
+        >과제 저장소 -
+        <a href="https://gofla1996.github.io/homework/about-me">자기소개</a></a
+      >
+    </p>
+
     <a
       href="https://www.naver.com/"
       target="_blank"
       title="네이버로 이동합니다."
+      rel="noopener noreferrer"
       >네이버</a
     >
     <br />
-    <a href="https://www.daum.net/" target="_blank" title="다음으로 이동합니다."
+    <a
+      href="https://www.daum.net/"
+      target="_blank"
+      title="다음으로 이동합니다."
+      rel="noopener noreferrer"
       >다음</a
     >
     <br />
@@ -41,8 +60,8 @@
     <hr />
     <!-- 파일 다운로드 링크 -->
     <a
-      href="./../assets/pdf/search-engine-optimization-starter-guide.pdf"
-      download="search-engine-optimization-starter-guide.pdf"
+      href="./../assets/pdf/google-seo-guide-ko.pdf"
+      download="google-seo-guide-ko.pdf"
       >구글 SEO 가이드</a
     >
     <br />
