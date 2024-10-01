@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>테이블 관련 요소 | Techit</title>
+    <style>
+      th,
+      td {
+        border: 1px solid currentColor;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="./../../index.html">처음으로</a>
+    <h1>테이블 관련 요소</h1>
+    <table>
+      <caption>
+        과목별 성적표
+      </caption>
+      <thead>
+        <tr>
+          <!-- scope 영향을 주는 범위 col 콜럼 방향으로 -->
+          <th scope="col">이름</th>
+          <th scope="col">HTML</th>
+          <th scope="col">CSS</th>
+          <th scope="col">Javascript</th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <!-- &nbsp; : 공백문자 -->
+          <!-- <th>1명</th>
+          <th>part1</th>
+          <th>part2</th>
+          <th>part3</th> -->
+        </tr>
+      </tfoot>
+      <tbody>
+        <tr>
+          <td scope="row">홍길동</td>
+          <td>95</td>
+          <td>87</td>
+          <td>92</td>
+        </tr>
+        <tr>
+          <td scope="row">이영희</td>
+          <td>98</td>
+          <td>75</td>
+          <td>88</td>
+        </tr>
+      </tbody>
+      <tbody>
+        <tr>
+          <td scope="row">김철수</td>
+          <td>95</td>
+          <td>87</td>
+          <td>92</td>
+        </tr>
+        <tr>
+          <td scope="row">나성실</td>
+          <td>98</td>
+          <td>75</td>
+          <td>88</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr />
+
+    <table>
+      <caption></caption>
+      <tr>
+        <th id="study-time">학습시간</th>
+        <td headers="study-time">09:00 ~ 17:00(28시간)</td>
+        <th id="difficulty">난이도</th>
+        <td headers="difficulty">초급</td>
+      </tr>
+      <tr>
+        <th id="educational-expenses">교육비 지원</th>
+        <td headers="educational-expenses">고용보험 비환급</td>
+        <th id="evaluation-items">평가항목</th>
+        <td headers="evaluation-items">출석률 100%</td>
+      </tr>
+      <tr>
+        <th id="completion-criteria">수료기준</th>
+        <td headers="completion-criteria">총점 80점 이상시 수료</td>
+        <th id="class-capacity">정원</th>
+        <td headers="class-capacity">24명</td>
+      </tr>
+      <tr>
+        <th id="learning-textbook">교재정보</th>
+        <td colspan="3" headers="learning-textbook">
+          입문자를 위한 GIT과 HTML&CSS <br />HTML & CSS 웹사이트 개발과 디자인 기초 (35,000원)
+        </td>
+      </tr>
+    </table>
+
+    <table class="lecture-table">
+      <caption>
+        입문자를 위한 Git과 HTML&CSS 과정
+        <span>학습시간, 난이도, 교육비 지원, 평가항목, 수료기준, 정원, 교재 정보 등을 나타낸 표</span>
+      </caption>
+      <tr>
+        <th id="study-time">학습시간</th>
+        <td headers="study-time">09:00 ~ 17:00 ( 28시간 )</td>
+        <th id="difficulty">난이도</th>
+        <td headers="difficulty">초급</td>
+      </tr>
+      <tr>
+        <th id="educational-expenses">교육비 지원</th>
+        <td headers="educational-expenses">고용보험 비환급</td>
+        <th id="evaluation-items">평가항목</th>
+        <td headers="evaluation-items">출석률 100%</td>
+      </tr>
+      <tr>
+        <th id="completion-criteria">수료기준</th>
+        <td headers="completion-criteria">총점 80점 이상시 수료</td>
+        <th id="class-capacity">정원</th>
+        <td headers="class-capacity">24 명</td>
+      </tr>
+      <tr>
+        <th id="learning-textbook">교재정보</th>
+        <td colspan="3" headers="learning-textbook">
+          입문자를 위한 Git과 HTML&CSS<br />
+          HTML & CSS 웹사이트 개발과 디자인 기초 (35,000원)
+        </td>
+      </tr>
+    </table>
+
+    <hr />
+
+    <table>
+      <caption>
+        테이블 예시
+      </caption>
+      <tr>
+        <th>Date</th>
+        <th>Event</th>
+        <th>Venue</th>
+      </tr>
+      <tr>
+        <td>12 February</td>
+        <td>Waltz with Strauss</td>
+        <td>Main Hall</td>
+      </tr>
+    </table>
+  </body>
+</html>
