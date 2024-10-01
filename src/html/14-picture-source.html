@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>반응형 이미지 | Techit</title>
+    <style>
+      figure {
+        margin: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <a href="./../../index.html">처음으로</a>
+
+    <h1>picture와 source 요소</h1>
+    <!-- srcset 속성을 이용하여 이미지 소스 세트를 제공하는 경우 -->
+    <figure>
+      <!-- fallback 코드 웹피포맷 지원 안 할 경우 png로 -->
+      <img src="./../assets/logo/netflix@1x.png" alt="" srcset="./../assets/logo/netflix@1x.webp" />
+      <figcaption>넷플릭스</figcaption>
+    </figure>
+
+    <hr />
+
+    <!-- picture 요소와 source 요소 그리고 srcset 속성을 이용하여 이미지 소스 세트를 제공하는 경우 (X 디스크립터) -->
+    <figure>
+      <!-- picture 요소 안에는 반드시 img 태그를 포함해야 한다 -->
+      <picture>
+        <source srcset="./../assets/logo/netflix@1x.webp 1x, ./../assets/logo/netflix@2x.webp 2x" />
+        <img src="./../assets/logo/netflix@1x.png" alt="" />
+      </picture>
+      <figcaption>넷플릭스</figcaption>
+    </figure>
+
+    <hr />
+
+    <figure>
+      <picture>
+        <source
+          srcset="
+            ./../assets/rwd/image-1x.png 1x,
+            ./../assets/rwd/image-2x.png 2x,
+            ./../assets/rwd/image-3x.png 3x,
+            ./../assets/rwd/image-4x.png 4x
+          "
+        />
+        <img src="./../assets/rwd/image-src.png" alt="" />
+      </picture>
+      <figcaption>해상도별 렌더링 이미지 소스</figcaption>
+    </figure>
+
+    <hr />
+
+    <!-- picture 요소와 source 요소 그리고 srcset 속성을 이용하여 이미지 소스 세트를 제공하는 경우 (W 스크립터) -->
+    <figure>
+      <picture>
+        <source
+          srcset="
+            ./../assets/rwd/small-550.jpg    550w,
+            ./../assets/rwd/medium-1024.jpg 1024w,
+            ./../assets/rwd/large-1600.jpg  1600w,
+            ./../assets/rwd/normal-1920.jpg 1920w
+          "
+          sizes="(max-width:768px) 100vw, 50vw"
+        />
+        <img src="" alt="" />
+      </picture>
+      <figcaption>해상도별 렌더링 이미지 소스2</figcaption>
+    </figure>
+  </body>
+</html>
