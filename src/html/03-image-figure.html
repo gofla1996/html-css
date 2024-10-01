@@ -16,31 +16,15 @@
     <h1>이미지 삽입하기</h1>
     <!-- 이미지 리소스를 삽입할 때는 img 태그를 사용할 수 있으며 리소스는 src 속성으로 이미지 설명은 alt 속성으로 지정 -->
     <!-- 상대경로 방식으로 이미지 리소스를 지정 -->
-    <img
-      src="./../assets/food/icecream.webp"
-      alt="[벤앤제리스] 파인트 아이스크림 6종"
-    />
+    <img src="./../assets/food/icecream.webp" alt="[벤앤제리스] 파인트 아이스크림 6종" />
     <!-- 절대경로 방식으로 이미지 리소스를 지정 -->
-    <img
-      src="/src/assets/food/icecream.webp"
-      alt="[벤앤제리스] 파인트 아이스크림 6종"
-    />
+    <img src="/src/assets/food/icecream.webp" alt="[벤앤제리스] 파인트 아이스크림 6종" />
     <!-- 벡터 이미지 삽입하기 (img 요소를 사용할 경우) -->
-    <img
-      class="svg-img"
-      src="./../assets/svg/chitchat.svg"
-      role="img"
-      alt="1대1 채팅"
-    />
+    <img class="svg-img" src="./../assets/svg/chitchat.svg" role="img" alt="1대1 채팅" />
 
     <!-- 벡터 이미지 삽입하기 (svg 요소를 사용할 경우) -->
     <!-- SVG 요소 내부에 title 요소로 제목을 지정한 후 id 값을 SVG 요소에 aria-labelledby 속성의 값으로 지정 -->
-    <svg
-      class="svg-img"
-      viewBox="0 0 40 40"
-      xmlns="http://www.w3.org/2000/svg"
-      aria-labelledby="message"
-    >
+    <svg class="svg-img" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg" aria-labelledby="message">
       <title id="message">메시지</title>
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="a">
@@ -84,19 +68,7 @@
 
     <!-- Lazy Loading (지연 로딩) -->
     <!-- img 요소에 width와 height 속성을 지정하면 성능 관점에서 도움이 됨 -->
-    <img
-      src="./../assets/drama/mom-friend-son-narrow.webp"
-      alt="엄마 친구 아들"
-      loading="lazy"
-      width="284"
-      height="398"
-    />
-    <img
-      src="./../assets/drama/mom-friend-son-wide.webp"
-      alt="엄마 친구 아들"
-      loading="lazy"
-      width="341"
-      height="192"
-    />
+    <img src="./../assets/drama/mom-friend-son-narrow.webp" alt="엄마 친구 아들" loading="lazy" width="284" height="398" />
+    <img src="./../assets/drama/mom-friend-son-wide.webp" alt="엄마 친구 아들" loading="lazy" width="341" height="192" />
   </body>
 </html>
