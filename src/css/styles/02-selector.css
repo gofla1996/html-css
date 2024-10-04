@@ -1,3 +1,9 @@
+/* *,
+*::before,
+*::after {
+  box-sizing: border-box;
+} */
+
 /* 전체 선택자 */
 /* 성능에 영향을 주기 때문에 추천하지 않지만 모두 선택하는 방식이다 */
 * {
@@ -6,7 +12,16 @@
   color: brown;
 }
 
+body * {
+  color: violet;
+}
+
 /* 요소 선택자 */
+html {
+  /* 기본 글자 크기 -> 16px */
+  /* 기본 글자크기를 10px로 지정 */
+  font-size: 0.625em;
+}
 p {
   color: blue;
 }
@@ -24,4 +39,69 @@ p {
 /* 속성 선택자 : attribute selector */
 [title] {
   color: pink;
+}
+
+/* 자손 결합 선택자 */
+p span {
+  color: skyblue;
+}
+p > span {
+  text-decoration: underline;
+}
+
+/* 가상 요소 (Pseudo Elements) */
+/* 마크업에 존재하지 않고, css 상에 가상으로 만든 요소 */
+h1::before {
+  content: "첫번째 자식 요소";
+}
+h1::after {
+  content: "마지막 자식 요소";
+}
+
+p::first-letter {
+  font-size: 3.5rem;
+}
+
+::selection {
+  background-color: darkblue;
+  color: white;
+}
+
+/* 가상 클래스 (Pseudo Classes) */
+:root {
+  /* 요소 선택자 html과 동일한 효과 */
+  font-size: 0.75em;
+}
+
+/* 가상 클래스를 이용한 선택자 그룹화 */
+:is(.heading, h2, h3, h4, h5, h6) span {
+  background-color: salmon;
+  color: blue;
+}
+
+/* 선택자 그룹화 */
+h1 span,
+h2 span,
+h3 span,
+h4 span,
+h5 span,
+h6 span {
+  background-color: yellow;
+  color: black;
+}
+
+/* where의 명시도 0점 : 마지막에 적용해도 다른 css 속성에 의해 우선 순윙에서 밀려나게 됨 */
+:where(h1, h2, h3, h4, h5, h6) span {
+  background-color: lightgreen;
+  color: red;
+}
+
+h6:has(+ p) {
+  border: 1px solid green;
+  padding: 10px;
+}
+
+p:has(> strong) {
+  border: 1px solid red;
+  padding: 10px;
 }
