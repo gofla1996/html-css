@@ -1,0 +1,27 @@
+/* 전체 선택자 */
+/* 성능에 영향을 주기 때문에 추천하지 않지만 모두 선택하는 방식이다 */
+* {
+  /* 글자 색상 */
+  /* 16진수 ; 키워드 ; 10진수 ; hsl 방식 */
+  color: brown;
+}
+
+/* 요소 선택자 */
+p {
+  color: blue;
+}
+
+/* class 선택자 */
+.likelion {
+  color: green;
+}
+
+/* id 선택자 */
+#techit {
+  color: red;
+}
+
+/* 속성 선택자 : attribute selector */
+[title] {
+  color: pink;
+}
