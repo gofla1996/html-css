@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dialog 요소 | Techit</title>
+    <style>
+      dialog::backdrop {
+        background: rgb(0 0 0 / 50%);
+      }
+    </style>
+    <script type="module">
+      const showButton = document.querySelector(".show-button");
+      const penalDialog = document.querySelector("dialog");
+      const closeButton = document.querySelector(".close-button");
+
+      showButton.addEventListener("click", () => {
+        penalDialog.showModal();
+      });
+
+      closeButton.addEventListener("click", () => {
+        penalDialog.close();
+      });
+    </script>
+  </head>
+  <body>
+    <h1>dialog 요소</h1>
+    <!-- 다이얼로그 예시 -->
+    <dialog aria-labelledby="join-info">
+      <p id="join-info">차별화된 회원가입 혜택</p>
+      <a href="/">지금 바로 만나보세요!</a>
+      <form method="dialog">
+        <button type="button">오늘 하루 안 보기</button>
+        <button type="button" class="close-button">닫기</button>
+      </form>
+    </dialog>
+    <button type="button" class="show-button">다이얼로그 보기</button>
+  </body>
+</html>

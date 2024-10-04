@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>form (input 요소) | Techit</title>
+  </head>
+  <body>
+    <h1>form 관련 요소</h1>
+    <h2>input 요소</h2>
+    <form action="https://formspree.io/f/xeqwwbwk" method="post">
+      <fieldset>
+        <legend>input 요소를 활용한 다양한 양식 만들기</legend>
+        <!-- 한줄 글상자 (text) -->
+        <p>
+          <label for="user-name">이름</label>
+          <input placeholder="이름을 입력하세요" type="text" name="user-name" id="user-name" required />
+        </p>
+        <!-- 검색어 입력상자 (search) -->
+        <p><label for="search">검색어</label> <input type="search" name="search" id="search" /></p>
+        <!-- 이메일 입력 서식 (email) -->
+        <p><label for="user-email">이메일</label> <input type="email" name="user-email" id="user-email" required /></p>
+        <!-- 숫자 입력 서식 (tel) -->
+        <p><label for="user-phone">연락처</label> <input type="tel" name="user-phone" id="user-phone" required /></p>
+
+        <!-- 체크박스 서식 (checkbox) -->
+        <p>
+          <input value="html" checked type="checkbox" name="likelion-class" id="html" /> <label for="html">HTML</label>
+          <input value="css" type="checkbox" name="likelion-class" id="css" /> <label for="css">CSS</label>
+          <input value="js" checked type="checkbox" name="likelion-class" id="js" /> <label for="js">Javascript</label>
+          <input value="react" type="checkbox" name="likelion-class" id="react" /> <label for="react">React</label>
+        </p>
+        <!-- 라디오 서식 (radio) -->
+        <p>
+          <input value="회고 1팀" checked type="radio" name="techit-class" id="class-1" /> 회고 1팀
+          <input value="회고 2팀" type="radio" name="techit-class" id="class-2" /> 회고 2팀
+        </p>
+
+        <button type="submit">전송</button>
+        <input type="submit" value="보내기" />
+      </fieldset>
+    </form>
+  </body>
+</html>

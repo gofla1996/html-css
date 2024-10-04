@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>video 및 iframe 요소 | Techit</title>
+  </head>
+  <body>
+    <h1>배디오 포함하기</h1>
+    <figure>
+      <!-- autoplay 속성은 muted 속성을 함께 제공할 경우에만 동작 -->
+      <video class="fullsize" poster="../assets/video/poster.jpg" controls>
+        <source src="../assets/video/google-developer-stories.mp4" type="video/mp4" />
+        <source src="../assets/video/google-developer-stories.mov" type="video/mov" />
+        <source src="../assets/video/google-developer-stories.ogg" type="video/ogg" />
+        <source src="../assets/video/google-developer-stories.webm" type="video/webm" />
+        <track
+          src="../assets/video/google-developer-stories-subtitles-en.vtt"
+          kind="captions"
+          srclang="en"
+          label="English Caption"
+        />
+      </video>
+      <figcaption>구글 개발자 이야기</figcaption>
+    </figure>
+    <hr />
+    <video
+      src="./../assets/video/google-developer-stories.mp4"
+      class="fullsize"
+      poster="../assets/video/poster.jpg"
+      controls
+      autoplay
+      muted
+    >
+      <track
+        src="../assets/video/google-developer-stories-subtitles-en.vtt"
+        kind="captions"
+        srclang="en"
+        label="English Caption"
+      />
+    </video>
+    <hr />
+    <figure>
+      <div class="iframe-container iframe16">
+        <iframe
+          class="fullsize"
+          width="560"
+          height="315"
+          title="웹접근성 웹표준 개념"
+          aria-label="웹접근성과 웹표준 개념"
+          frameborder="0"
+          allowfullscreen
+          src="https://www.youtube.com/embed/fUcIe7-2zxw"
+        ></iframe>
+      </div>
+      <figcaption>iframe을 활용하여 비디오 삽입하기</figcaption>
+    </figure>
+  </body>
+</html>
