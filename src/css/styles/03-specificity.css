@@ -1,0 +1,56 @@
+/* 부모에게 적용된 스타일이 자식 요소에게도 그대로 상속된다. */
+body {
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+  margin: 20px;
+  border: 10px solid green;
+  padding: 50px;
+  color: darkblue;
+}
+
+p {
+  color: silver;
+}
+
+/* layer 우선순위 지정 : 뒤로 갈수록 순위가 높음 */
+@layer techit, likelion;
+
+@layer likelion {
+  p {
+    color: red;
+  }
+}
+
+/* 익명의 레이어를 생성하면 레이어가 아닌 계층의 속성이 무조건 우선 순위로 온다. */
+@layer techit {
+  p {
+    color: green !important;
+  }
+}
+
+@layer likelion {
+  h2 {
+    background-color: yellow;
+  }
+}
+
+@layer techit {
+  h2 {
+    background-color: tomato;
+  }
+}
+
+/* h1 {
+  color: green;
+}
+
+p {
+  color: orange;
+}
+
+#school.likelion {
+  color: gray;
+}
+
+#school {
+  color: red;
+} */
