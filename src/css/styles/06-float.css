@@ -1,0 +1,47 @@
+.container div {
+  /* width: 100px;
+  inline-size: 100px; */
+  height: 100px;
+  block-size: 100px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.container {
+  /* currentColor : 현재 텍스트 색에 맞춰 보더 색상도 같게 지정 */
+  border: 10px solid currentColor;
+  display: flow-root;
+}
+
+div.box1 {
+  background-color: sandybrown;
+  float: left;
+  width: 100px;
+  inline-size: 100px;
+}
+div.box2 {
+  background-color: skyblue;
+  height: auto;
+  block-size: auto;
+  line-height: 1;
+  text-align: left;
+}
+div.box3 {
+  background-color: lightgreen;
+  clear: both;
+  margin-top: 20px;
+  margin-block-start: 20px;
+  width: 200px;
+  inline-size: 200px;
+  float: right;
+}
+div.box4 {
+  background-color: yellow;
+  margin-top: 20px;
+  margin-block-start: 20px;
+  width: 300px;
+  inline-size: 300px;
+  float: right;
+  position: relative;
+  top: 50px;
+}
