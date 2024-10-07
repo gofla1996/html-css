@@ -1,0 +1,98 @@
+@import "./../../common/reset.css";
+
+/* 영역별 배경 색상 지정 */
+.header {
+  background-color: yellow;
+}
+
+.visual {
+  background-color: pink;
+}
+
+.main {
+  background-color: lightgreen;
+}
+
+.slogan {
+  background-color: skyblue;
+}
+
+.footer {
+  background-color: sandybrown;
+}
+
+.header,
+.visual,
+.main,
+.slogan,
+.footer {
+  width: 940px;
+  inline-size: 940px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-inline: auto;
+}
+
+.header,
+.visual,
+.slogan,
+.footer {
+  height: 10vh;
+  block-size: 10vh;
+}
+
+.main {
+  box-sizing: border-box;
+  /* border: 1px solid currentColor; */
+  display: flow-root;
+  /* height: 60vh;
+  block-size: 60vh; */
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-inline: 15px;
+}
+
+.group {
+  background-color: lightcoral;
+  /* height: 20vh; */
+  /* margin-left: 30px; */
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-inline: 15px;
+  height: 60vh;
+  block-size: 60vh;
+}
+
+.group1 {
+  float: left;
+  float: inline-start;
+  width: 250px;
+  inline-size: 250px;
+  /* height: 20vh;
+  block-size: 20vh; */
+  /* margin-left: 30px; */
+}
+
+.group2 {
+  float: left;
+  float: inline-start;
+  width: 380px;
+  inline-size: 380px;
+  /* height: 30vh;
+  block-size: 30vh; */
+  /* margin-left: 30px; */
+}
+
+.group3 {
+  float: left;
+  float: inline-start;
+  width: 190px;
+  inline-size: 190px;
+  /* height: 40vh;
+  block-size: 40vh; */
+  /* margin-left: 30px; */
+}
+
+.slogan {
+  clear: both;
+}
