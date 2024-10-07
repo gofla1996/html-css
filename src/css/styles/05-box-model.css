@@ -1,0 +1,63 @@
+/* 요소별 배경색상 */
+span {
+  background-color: pink;
+}
+div {
+  background-color: yellow;
+}
+div + div {
+  background-color: lightgreen;
+}
+/* 인라인 상자 - 크기 지정 */
+/* 인라인 상자는 임의로 가로 세로 크기를 지정할 수 없음. */
+span {
+  width: 200px;
+  inline-size: 200px;
+  height: 200px;
+  block-size: 200px;
+}
+/* 블록 상자 - 크기 지정 */
+/* 박스모델 관련 속성 */
+.likelion {
+  width: 800px;
+  inline-size: 800px;
+  border: 10px solid currentColor;
+  padding: 50px;
+  /* margin: 0 auto; */
+  /* auto 키워드를 활용하여 정렬 스타일링  */
+  margin-left: auto;
+  margin-inline-start: auto;
+}
+/* Margin 속성 - 병합 */
+.techit {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-block: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-block: 20px;
+}
+/* margin 속성은 padding과 달리 음수 값을 가질 수 있다. */
+.school {
+  margin-top: -20px;
+  margin-bottom: -20px;
+  margin-block: -20px;
+}
+.negative {
+  background-color: orange;
+  margin-top: -10px;
+  margin-bottom: -10px;
+  margin-block: -10px;
+}
+section {
+  border: 1px solid currentColor;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  margin-block: 50px;
+}
+/* 인라인 방향의 여백(Margin) */
+span {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-inline: 20px;
+}
