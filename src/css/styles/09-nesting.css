@@ -1,0 +1,37 @@
+@import "./../../common/normalize.css";
+
+.member {
+  background-color: yellow;
+
+  .member__list {
+    list-style: "";
+  }
+
+  .member__item {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-block: 10px;
+  }
+
+  .member__link {
+    text-decoration: none;
+    color: #121212;
+
+    &:hover,
+    &:focus {
+      border: 1px solid red;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+/* Sass 방식 - CSS에서는 동작하지 않음. */
+
+.likelion {
+  &__list {
+    background-color: lightgreen;
+  }
+}

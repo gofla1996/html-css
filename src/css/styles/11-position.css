@@ -1,0 +1,43 @@
+@import "./../../common/mordern-reset.css";
+
+div:not(#awebChromeHelper) {
+  font-size: 3rem;
+  border: 1px solid currentColor;
+  padding: 10px;
+}
+
+.static {
+  background: yellow;
+}
+
+.fixed {
+  background-color: hsla(250 50% 50% / 1);
+  position: fixed;
+  inset-inline-end: 0;
+  inset-block-end: 0;
+}
+
+.relative-wrapper {
+  position: relative;
+  inset-block-start: 50px;
+  inset-inline-start: 50px;
+}
+.absolute-wrapper {
+  position: absolute;
+}
+
+.absolute {
+  inline-size: 650px;
+  background: sandybrown;
+  position: absolute;
+  inset-inline-start: 100px;
+  inset-block-start: 0px;
+}
+
+.sticky {
+  background-color: aquamarine;
+  padding: 20px;
+  margin-block: 100px;
+  position: sticky;
+  inset-block-start: 0;
+}

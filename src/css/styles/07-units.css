@@ -1,0 +1,59 @@
+@import "./../../common/normalize.css";
+
+body {
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+}
+
+/* px 단위 */
+.unit-px {
+  font-size: 20px;
+}
+/* em 단위 */
+.unit-em-wrapper {
+  font-size: 1.5em;
+}
+
+.unit-em {
+  font-size: 1.5em;
+}
+
+/* rem 단위 */
+.unit-rem-wrapper {
+  font-size: 1.5em;
+}
+.unit-rem {
+  font-size: 0.75rem;
+}
+
+/* percentage 단위 */
+.unit-percentage-wrapper {
+  font-size: 1.5em;
+}
+.unit-percentage {
+  font-size: 150%;
+}
+
+/* vw 단위 */
+.unit-vw {
+  font-size: 3vw;
+}
+
+/* CSS의 색상 값 */
+.unit-color-name {
+  color: darkgreen;
+}
+
+.unit-color-hex {
+  color: #ff0000;
+  background-color: #00f;
+}
+
+.unit-color-rgb {
+  color: rgb(0, 255, 0);
+  background-color: rgb(255 255 0);
+}
+
+.unit-color-hsla {
+  color: hsla(310, 50%, 50%, 0.5);
+  background-color: hsla(110 50% 20% / 0.5);
+}

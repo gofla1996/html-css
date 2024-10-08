@@ -1,0 +1,33 @@
+@import "./../../common/mordern-reset.css";
+
+body {
+  margin: 50px;
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+  background-color: rgb(230, 230, 129);
+  background-image: url(./../../assets/images/rabbit.png);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: 100px 120px;
+  background-attachment: fixed;
+}
+
+.bg-text-gradient {
+  font-size: 3.5rem;
+  font-weight: 900;
+  margin-block: 20px;
+  background-color: lightgreen;
+  background-image: linear-gradient(red, orange, green, darkblue, purple);
+  background-clip: text;
+  color: transparent;
+}
+
+.bg-origin {
+  inline-size: 800px;
+  margin-inline: auto;
+  /* background-color: pink;
+  background-image: url(./../../assets/thumbnail/meeting-room.jpg);
+  background-origin: border-box; */
+  padding: 20px;
+  border: 20px solid hsla(350 50% 50% / 0.2);
+  background: salmon url(./../../assets/thumbnail/meeting-room.jpg) border-box no-repeat 20px 20px / cover;
+}
