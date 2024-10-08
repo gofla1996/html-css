@@ -1,63 +1,140 @@
-/* 요소별 배경색상 */
-span {
-  background-color: pink;
+/* body 요소와 p 요소의 Agent Style 제거 */
+body,
+p {
+  margin: 0;
 }
-div {
+
+/* 요소박스 크기 지정하기 */
+/* 인라인 박스 */
+.inline-box-size {
   background-color: yellow;
+  padding: 10px;
+
+  /* 인라인 요소의 경우 가로, 세로 크기를 설정해도 컨텐츠 크기로 렌더링 됨. */
+  strong {
+    background-color: pink;
+    width: 200px;
+    inline-size: 200px;
+  }
+
+  em {
+    background-color: lightgreen;
+    height: 100px;
+    block-size: 100px;
+  }
 }
-div + div {
+
+/* 블록 박스 */
+.block-box-size {
+  background-color: skyblue;
+  padding: 10px;
+
+  /* 인라인 요소의 경우 가로, 세로 크기를 설정해도 컨텐츠 크기로 렌더링 됨. */
+  p {
+    background-color: blueviolet;
+    color: white;
+    width: 800px;
+    inline-size: 800px;
+    height: 150px;
+    block-size: 150px;
+  }
+}
+
+/* 블록 박스의 테두리 지정하기 - border 속성 */
+.block-box-border {
+  background-color: sandybrown;
+  padding: 10px;
+
+  p {
+    border-top: 5px solid red;
+    border-block-start: 5px solid red;
+    border-right: 5px double blue;
+    border-inline-end: 5px double blue;
+    border-bottom: 5px dotted green;
+    border-block-end: 5px dotted green;
+    border-left: 5px dashed purple;
+    border-inline-start: 5px dashed purple;
+  }
+}
+
+/* 블록 박스의  안쪽 여백 지정하기 - padding 속성 */
+.block-box-padding {
+  background-color: yellow;
+  padding: 10px;
+
+  p {
+    background-color: pink;
+    padding-top: 5px;
+    padding-block-start: 5px;
+    padding-right: 10px;
+    padding-inline-end: 10px;
+    padding-bottom: 15px;
+    padding-block-end: 15px;
+    padding-left: 20px;
+    padding-inline-start: 20px;
+  }
+}
+
+/* 블록 박스의 바깥쪽 여백 지정하기 - margin 속성 */
+.block-box-margin {
   background-color: lightgreen;
+  padding: 10px;
+
+  p {
+    background-color: pink;
+    margin-top: 5px;
+    margin-block-start: 5px;
+    margin-right: 10px;
+    margin-inline-end: 10px;
+    margin-bottom: 15px;
+    margin-block-end: 15px;
+    margin-left: 20px;
+    margin-inline-start: 20px;
+  }
 }
-/* 인라인 상자 - 크기 지정 */
-/* 인라인 상자는 임의로 가로 세로 크기를 지정할 수 없음. */
-span {
-  width: 200px;
-  inline-size: 200px;
-  height: 200px;
-  block-size: 200px;
+
+/* 블록 박스의 마진 병합 */
+.block-box-collapse {
+  background-color: aqua;
+  padding: 10px;
+
+  p {
+    border: 5px solid blue;
+    padding: 5px;
+    margin-block: 20px;
+  }
 }
-/* 블록 상자 - 크기 지정 */
-/* 박스모델 관련 속성 */
-.likelion {
+
+/* 블록 박스의 음수 마진 활용 */
+.block-box-negative {
+  background-color: yellow;
   width: 800px;
   inline-size: 800px;
-  border: 10px solid currentColor;
-  padding: 50px;
-  /* margin: 0 auto; */
-  /* auto 키워드를 활용하여 정렬 스타일링  */
-  margin-left: auto;
-  margin-inline-start: auto;
+  margin-inline: auto;
+
+  p {
+    margin-block: 20px;
+    background-color: salmon;
+
+    &:nth-child(2) {
+      margin-inline: -100px;
+    }
+  }
 }
-/* Margin 속성 - 병합 */
-.techit {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  padding-block: 10px;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  margin-block: 20px;
-}
-/* margin 속성은 padding과 달리 음수 값을 가질 수 있다. */
-.school {
-  margin-top: -20px;
-  margin-bottom: -20px;
-  margin-block: -20px;
-}
-.negative {
-  background-color: orange;
-  margin-top: -10px;
-  margin-bottom: -10px;
-  margin-block: -10px;
-}
-section {
-  border: 1px solid currentColor;
-  margin-top: 50px;
-  margin-bottom: 50px;
-  margin-block: 50px;
-}
-/* 인라인 방향의 여백(Margin) */
-span {
-  margin-left: 20px;
-  margin-right: 20px;
-  margin-inline: 20px;
+
+.block-box-float-negative {
+  background-color: aquamarine;
+  padding: 50px 100px;
+  display: flow-root;
+
+  p {
+    background-color: pink;
+    border: 5px solid blueviolet;
+    width: 100px;
+    inline-size: 100px;
+    float: left;
+    float: inline-start;
+    margin-left: -50px;
+    margin-inline-start: -50px;
+  }
 }
