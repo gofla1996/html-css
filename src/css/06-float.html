@@ -3,30 +3,56 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Float 속성 파헤치기 | Techit</title>
-    <!-- Noto Serif -->
+    <title>Float 속성 | Techit</title>
     <link rel="preload" as="style" href="./../assets/font/notoserif/notoserif.css" />
     <link rel="stylesheet" href="./../assets/font/notoserif/notoserif.css" />
-    <!-- Pretendard -->
     <link rel="preload" as="style" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
     <link rel="stylesheet" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
-    <!-- css 파일 -->
+
     <link rel="stylesheet" href="./styles/06-float.css" />
   </head>
   <body>
-    <a href="./../../index.html">처음으로</a>
     <h1>Float 속성 파헤치기</h1>
-    <div class="container">
-      <div class="box1">Red</div>
-      <div class="box2">
+
+    <hr />
+
+    <h2>플로트 박스와 텍스트 - float / display: flow-root</h2>
+    <div class="float-text">
+      <div class="float-box">플로트 박스</div>
+      <div class="text-box">
         '함께 성장하는 바른 교육' 이듬(EUID)과 멋쟁이 사자처럼 태킷(Techit) 스쿨이 만났습니다. '이듬' 교육이 지향하는 비전은 동반
         성장에 있습니다. 강사에서 수강생으로 한 방향으로 흘러가는 지식 전달이 아닌, 함께 공감하고 이해하며 경험하는 교육 가치를
         통해 공동의 혁신을 이끌어내는 것을 목표로 합니다. 멋쟁이 사자처럼 태킷 스쿨은 '함께'의 가치를 중요하게 생각합니다. 5년이
         지나도, 10년이 지나도 IT 업계에 필요한 인재를 육성하는 교육을 제공하고, 기업의 HRD 파트너로 존재할 것이며 국내 대표 IT
         교육 회사인 만큼 더 좋은 교육이 무엇인지를 끊임없이 고민하는 회사로 자리매김할 것입니다.
       </div>
-      <div class="box3">Green</div>
-      <div class="box4">Yellow</div>
+    </div>
+
+    <hr />
+
+    <h2>플로트 해제 - clear</h2>
+    <div class="float-clear">
+      <div class="float-box">플로트 박스</div>
+      <div class="clear-box">
+        '함께 성장하는 바른 교육' 이듬(EUID)과 멋쟁이 사자처럼 태킷(Techit) 스쿨이 만났습니다. '이듬' 교육이 지향하는 비전은 동반
+        성장에 있습니다. 강사에서 수강생으로 한 방향으로 흘러가는 지식 전달이 아닌, 함께 공감하고 이해하며 경험하는 교육 가치를
+        통해 공동의 혁신을 이끌어내는 것을 목표로 합니다. 멋쟁이 사자처럼 태킷 스쿨은 '함께'의 가치를 중요하게 생각합니다. 5년이
+        지나도, 10년이 지나도 IT 업계에 필요한 인재를 육성하는 교육을 제공하고, 기업의 HRD 파트너로 존재할 것이며 국내 대표 IT
+        교육 회사인 만큼 더 좋은 교육이 무엇인지를 끊임없이 고민하는 회사로 자리매김할 것입니다.
+      </div>
+    </div>
+
+    <hr />
+
+    <h2>플로트를 활용한 컬럼 레이아웃</h2>
+    <div class="float-layout">
+      <ul>
+        <li>HOME</li>
+        <li>About Company</li>
+        <li>Boot Camp</li>
+        <li>Contact US</li>
+        <li>Sitemap</li>
+      </ul>
     </div>
   </body>
 </html>

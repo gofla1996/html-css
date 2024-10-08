@@ -1,47 +1,73 @@
-.container div {
-  /* width: 100px;
-  inline-size: 100px; */
-  height: 100px;
-  block-size: 100px;
-  text-align: center;
-  line-height: 100px;
+@import "./../../common/normalize.css";
+
+/* 본문의 기본 글꼴을 Pretendard Variable로 지정  */
+body {
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
 }
 
-.container {
-  /* currentColor : 현재 텍스트 색에 맞춰 보더 색상도 같게 지정 */
-  border: 10px solid currentColor;
-  display: flow-root;
-}
-
-div.box1 {
-  background-color: sandybrown;
-  float: left;
-  width: 100px;
-  inline-size: 100px;
-}
-div.box2 {
-  background-color: skyblue;
-  height: auto;
-  block-size: auto;
-  line-height: 1;
-  text-align: left;
-}
-div.box3 {
-  background-color: lightgreen;
-  clear: both;
-  margin-top: 20px;
-  margin-block-start: 20px;
-  width: 200px;
-  inline-size: 200px;
-  float: right;
-}
-div.box4 {
+/* float 속성 활용하기  */
+.float-text {
   background-color: yellow;
-  margin-top: 20px;
-  margin-block-start: 20px;
-  width: 300px;
-  inline-size: 300px;
-  float: right;
-  position: relative;
-  top: 50px;
+  /* float 요소 박스의 높이를 부모 요소가 포함해서 렌더링 */
+  display: flow-root;
+
+  .float-box {
+    border: 5px solid red;
+    width: 100px;
+    inline-size: 100px;
+    height: 100px;
+    block-size: 100px;
+    background-color: pink;
+    /* 부모 영역만큼의 라인 박스 안에서 왼쪽(inline-start)으로 배치 */
+    float: left;
+    float: inline-start;
+  }
+}
+
+/* clear 속성 활용하기 */
+.float-clear {
+  background-color: lightgreen;
+  /* float 요소박스의 높이를 부모 요소가 포함해서 렌더링 */
+  display: flow-root;
+
+  .float-box {
+    border: 5px solid blue;
+    width: 100px;
+    inline-size: 100px;
+    height: 100px;
+    block-size: 100px;
+    background-color: yellow;
+    /* 부모 영역만큼의 라인 박스 안에서 왼쪽(inline-start)으로 배치 */
+    float: left;
+    float: inline-start;
+  }
+
+  /* float 된 요소 박스와 텍스트가 분리되어 배치  */
+  .clear-box {
+    clear: both;
+  }
+}
+
+/* 리스트 스타일링, 플로트 컬럼 레이아웃 */
+.float-layout {
+  background-color: skyblue;
+  display: flow-root;
+  padding: 10px;
+
+  ul {
+    list-style: "";
+    float: right;
+    float: inline-end;
+  }
+
+  li {
+    background-color: sandybrown;
+    padding: 10px;
+    border: 5px solid green;
+    float: left;
+    float: inline-start;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-inline: 10px;
+  }
 }
