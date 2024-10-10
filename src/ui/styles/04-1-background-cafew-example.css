@@ -1,0 +1,89 @@
+@import "./../../common/best-reset.css";
+@import "./../../common/a11y.css";
+@import "./../../common/base.css";
+
+.coffee-lab {
+  inline-size: 1440px;
+  margin-inline: auto;
+
+  .coffee-lab__headline {
+    text-align: center;
+
+    h2 {
+      font-weight: 100;
+      font-size: 46px;
+      text-transform: uppercase;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.4;
+    }
+
+    strong {
+      font-weight: 700;
+    }
+
+    &::after {
+      content: "";
+      display: block;
+      inline-size: 70px;
+      block-size: 1px;
+      margin: 55px auto;
+      background-color: currentColor;
+    }
+  }
+
+  .coffee-lab__list {
+    --size: 392px;
+
+    list-style: "";
+    padding-block-end: 100px;
+    padding-inline-start: 100px;
+    text-align: center;
+    font-size: 0;
+    background: skyblue;
+
+    .coffee-lab__item {
+      /* 가상요소는 원래 inline 요소로 가로 크기 지정이 적용되지 않음 */
+      /* 따라서 display를 이용해 block 요소로 전환 */
+      display: inline-block;
+      inline-size: var(--size);
+      block-size: var(--size);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: 50%;
+      position: relative;
+    }
+
+    a {
+      display: inline-block;
+      padding-block-start: 300px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 1.4;
+      letter-spacing: 3.2px;
+      text-transform: uppercase;
+
+      &::after {
+        content: "";
+        display: block;
+        background-color: #fff;
+        block-size: 10px;
+      }
+    }
+
+    .coffee-lab__item:first-child {
+      background-image: url("./../../assets/cafew/coffee-lab-01-@2x.jpg");
+      z-index: 1;
+    }
+
+    .coffee-lab__item:last-child {
+      background-image: url("./../../assets/cafew/coffee-lab-02-@2x.jpg");
+      inset-block-start: 100px;
+      inset-inline-start: -100px;
+    }
+  }
+}

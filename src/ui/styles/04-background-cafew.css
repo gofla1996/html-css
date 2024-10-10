@@ -1,0 +1,36 @@
+@import "./../../common/best-reset.css";
+
+body {
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+  width: 100%;
+  inline-size: 100%;
+  height: 100vh;
+  block-size: 100vh;
+}
+
+hr {
+  width: 70px;
+}
+
+.lab-menu {
+  width: 692px;
+  inline-size: 692px;
+  height: 692px;
+  block-size: 692px;
+  background-image: url(./../../assets/cafew/coffee-lab-01-@2x.jpg);
+  background-repeat: no-repeat;
+  background-position: 100% 100%;
+  background-size: 692px 692px;
+  overflow: hidden;
+  display: flow-root;
+  position: relative;
+
+  h2 {
+    color: white;
+    position: absolute;
+    inset-inline-end: 50%;
+    inset-block-end: 70px;
+    border-block-end: 3px solid currentColor;
+    border-spacing: 30px;
+  }
+}
