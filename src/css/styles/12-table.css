@@ -47,18 +47,27 @@ body {
     inline-size: 30%;
   }
 
-  thead {
+  th {
     background-color: sandybrown;
+  }
+
+  /* table 요소의 border를 상속시켜서 스타일링 */
+  thead,
+  tbody,
+  tr,
+  th,
+  td {
+    border: inherit;
   }
 
   th,
   td {
-    border: 1px solid currentColor;
     /* 현재 글자 크기를 기준으로 */
     padding: 1em;
   }
 
   thead {
+    background-color: sandybrown;
     position: sticky;
     inset-block-start: 0;
   }
