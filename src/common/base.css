@@ -1,0 +1,22 @@
+/* 기본 스타일 */
+body {
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+}
+
+.ediya-container {
+  margin: var(--spacing-md);
+}
+
+.ediya-heading {
+  --title-text-color: var(--deep-blue, #24388d);
+  --subtitle-text-color: var(--silver, #878787);
+  margin-block: 20px;
+
+  h1 {
+    color: var(--title-text-color);
+  }
+
+  p {
+    color: var(--subtitle-text-color);
+  }
+}

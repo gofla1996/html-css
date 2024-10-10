@@ -1,0 +1,80 @@
+@import "./../../common/best-reset.css";
+@import "./../../common/a11y.css";
+@import "./../../common/theme.css";
+@import "./../../common/base.css";
+@import "./../../common/components/thumbnail-card.css";
+
+.ediya-container {
+  margin: var(--spacing-md);
+}
+
+/* 이디야 제목 그룹 */
+.ediya-heading {
+  --title-text-color: var(--deep-blue, #24388d);
+  --subtitle-text-color: var(--silver, #878787);
+
+  margin-block: var(--spacing-lg);
+
+  h1 {
+    color: var(--title-text-color);
+  }
+
+  p {
+    color: var(--subtitle-text-color);
+  }
+}
+
+/* 이디야 뉴스 */
+.ediya-news {
+  --text-color: var(--deep-blue, #24388d);
+  --border-thick: 2px;
+  --border-thin: 1px;
+  --border-color: currentColor;
+  --cell-spacing-head: var(--spacing-sm);
+  --cell-spacing-body: var(--spacing-md);
+
+  table-layout: fixed;
+  border-collapse: collapse;
+  border-spacing: 0;
+  inline-size: 710px;
+  color: var(--text-color);
+  border-block: var(--border-thick) solid var(--border-color);
+
+  .ediya-news__number {
+    inline-size: 46px;
+    text-align: center;
+  }
+
+  .ediya-news__content {
+    inline-size: 579px;
+  }
+
+  .ediya-news__date {
+    inline-size: 85px;
+    text-align: center;
+  }
+
+  tbody tr {
+    border-block-start: var(--border-thin) solid var(--border-color);
+  }
+
+  th {
+    font-size: 0.875rem;
+    padding-block: var(--cell-spacing-head);
+  }
+
+  td {
+    font-size: 0.75rem;
+    padding-block: var(--cell-spacing-body);
+
+    /* 이디야 소식 관련 내용이 포함 된 셀을 제외하고 모든 td 요소 선택 */
+    &:not(:nth-child(2)) {
+      text-align: center;
+      vertical-align: top;
+    }
+  }
+
+  .thumbnail-card__caption strong {
+    color: var(--text-color);
+  }
+}

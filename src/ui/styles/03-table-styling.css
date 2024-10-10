@@ -1,0 +1,68 @@
+@import "./../../common/best-reset.css";
+
+/* 24388D
+919BC6
+878787 */
+
+body {
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+  margin: 30px;
+}
+
+hgroup {
+  margin-block-start: 20px;
+  margin-block-end: 20px;
+
+  h1 {
+    font-size: 1.5rem;
+    color: #24388d;
+  }
+
+  p {
+    font-size: 0.8rem;
+    color: #878787;
+  }
+}
+
+figure {
+  display: flow-root;
+
+  .thumbnail-card__img {
+    float: left;
+  }
+}
+
+.ediya-news {
+  table-layout: fixed;
+  border-top: 2px solid #24388d;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  inline-size: 100%;
+
+  margin-block-start: 20px;
+
+  th,
+  td {
+    /* 현재 글자 크기를 기준으로 */
+    padding: 1em;
+  }
+}
+
+.ediya-news__number {
+  width: 10%;
+  inline-size: 10%;
+  text-align: center;
+}
+
+.ediya-news__content {
+  width: 70%;
+  inline-size: 70%;
+  text-align: left;
+}
+
+.ediya-news__date {
+  width: 20%;
+  inline-size: 20%;
+  text-align: center;
+}

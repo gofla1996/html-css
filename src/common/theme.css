@@ -1,0 +1,11 @@
+/* 전역 변수 - 이디야 테마 */
+:root {
+  --deep-blue: #24388d;
+  --light-blue: #919bc6;
+  --silver: #878787;
+
+  --spacing-sm: 10px;
+  --spacing-base: 12px;
+  --spacing-md: 16px;
+  --spacing-lg: 20px;
+}
