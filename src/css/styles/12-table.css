@@ -1,0 +1,73 @@
+@import "./../../common/modern-reset.css";
+
+/* html {
+  font-size: 0.625rem; 10px
+} */
+/* 강사님께서는 px->rem 수식 변환을 자동으로 해주는 익스텐션 사용하심 */
+
+body {
+  font-family: "Pretendard Variable", Pretendard, sans-serif;
+  margin: 50px;
+}
+
+/* 테이블 스타일링 */
+.table-wrapper {
+  height: 625px;
+  block-size: 625px;
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+}
+
+.table-styling {
+  /* table-layout - fixed : 첫 번째 열의 크기를 계산해서 나머지를 똑같은 크기로 할당 */
+  /* auto : 컨텐츠의 크기를 고려하여 각 컬럼마다 크기 계산 */
+  /* table-layout을 왜 사용하는지 찾아보기! */
+  /* 가급적 table-layout : fixed에 width를 100%로 설정하고 그 안에서 각 행의 너비를 쪼개서 사용하길 권장함 */
+  table-layout: fixed;
+  border: 1px solid currentColor;
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  inline-size: 100%;
+
+  .number {
+    width: 10%;
+    inline-size: 10%;
+  }
+  .name {
+    width: 20%;
+    inline-size: 20%;
+  }
+  .phone {
+    width: 40%;
+    inline-size: 40%;
+  }
+  .email {
+    width: 30%;
+    inline-size: 30%;
+  }
+
+  thead {
+    background-color: sandybrown;
+  }
+
+  th,
+  td {
+    border: 1px solid currentColor;
+    /* 현재 글자 크기를 기준으로 */
+    padding: 1em;
+  }
+
+  thead {
+    position: sticky;
+    inset-block-start: 0;
+  }
+
+  tbody tr:nth-child(even) {
+    background-color: silver;
+  }
+
+  tbody tr {
+    scroll-snap-align: start;
+  }
+}
