@@ -3,10 +3,17 @@
 @import "./../../common/base.css";
 
 .coffee-lab {
-  inline-size: 1440px;
+  --container-size: 1440px;
+
+  inline-size: var(--container-size);
   margin-inline: auto;
 
   .coffee-lab__headline {
+    --divider-size: 70px;
+    --divider-border-size: 1px;
+    --divider-border-color: currentColor;
+    --gap: 55px;
+
     text-align: center;
 
     h2 {
@@ -27,63 +34,77 @@
     &::after {
       content: "";
       display: block;
-      inline-size: 70px;
-      block-size: 1px;
-      margin: 55px auto;
-      background-color: currentColor;
+      inline-size: var(--divider-size);
+      block-size: var(--divider-border-size);
+      margin: var(--gap) auto;
+      background-color: var(--divider-border-color);
     }
   }
 
   .coffee-lab__list {
-    --size: 392px;
+    --size: 400px;
+    --spacing-sm: 30px;
+    --spacing-lg: 100px;
+    --text-color: #fff;
+    --border-width: 10px;
 
     list-style: "";
-    padding-block-end: 100px;
-    padding-inline-start: 100px;
+    padding-block-end: var(--spacing-lg);
+    padding-inline-start: var(--spacing-lg);
     text-align: center;
     font-size: 0;
-    background: skyblue;
 
     .coffee-lab__item {
-      /* 가상요소는 원래 inline 요소로 가로 크기 지정이 적용되지 않음 */
-      /* 따라서 display를 이용해 block 요소로 전환 */
       display: inline-block;
       inline-size: var(--size);
       block-size: var(--size);
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: 50%;
+      /* 배경 관련 속성을 단축 표기법(background)으로 설정 */
+      background: no-repeat 50% / cover;
+      /* item의 겹치는 순서를 제어(z-index)하기 위해 */
       position: relative;
-    }
 
-    a {
-      display: inline-block;
-      padding-block-start: 300px;
-      text-decoration: none;
-      color: #fff;
-      font-size: 32px;
-      font-weight: 700;
-      line-height: 1.4;
-      letter-spacing: 3.2px;
-      text-transform: uppercase;
+      a {
+        /* 인라인 요소였던 a 요소를 inline-block으로 지정하면 가로, 세로 크기를 설정할 수 있음 */
+        display: inline-block;
+        inline-size: inherit;
+        block-size: inherit;
+        /* Normal Flow에서도 세로 정렬이 가능해 졌으며 align-content 속성으로 이를 해결할 수 있음. */
+        align-content: end;
+        padding-block-end: var(--spacing-sm);
+        text-decoration: none;
+        color: var(--text-color);
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1.4;
+        letter-spacing: 3.2px;
+        text-transform: uppercase;
 
-      &::after {
-        content: "";
-        display: block;
-        background-color: #fff;
-        block-size: 10px;
+        /* 글자크기랑 동일한 밑줄을 표현하기 위해 span 요소를 inline-block으로 설정하고 가상요소를 block으로 지정 */
+        span {
+          display: inline-block;
+
+          &::after {
+            content: "";
+            display: block;
+            background-color: currentColor;
+            block-size: var(--border-width);
+          }
+        }
       }
     }
 
     .coffee-lab__item:first-child {
       background-image: url("./../../assets/cafew/coffee-lab-01-@2x.jpg");
+      /* position: relative로 설정된 li 요소 중 첫 번째 li 요소의 순서가 맨 위로 배치되도록 z-index 선언 */
       z-index: 1;
     }
 
     .coffee-lab__item:last-child {
       background-image: url("./../../assets/cafew/coffee-lab-02-@2x.jpg");
-      inset-block-start: 100px;
-      inset-inline-start: -100px;
+      inset-block-start: var(--spacing-lg);
+      /* 면수의 값을 음수로 사용하고자 할 경우 기존 값에 -1을 곱해서 사용할 수 있음. */
+      /* 이 경우 calc() 함수를 사용하여야 함. */
+      inset-inline-start: calc(var(--spacing-lg) * -1);
     }
   }
 }
