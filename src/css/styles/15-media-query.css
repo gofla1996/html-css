@@ -1,0 +1,40 @@
+@import "./../../common/mini-reset.css";
+@import "./../../common/base.css";
+
+body {
+  margin: 50px;
+}
+
+.box-border {
+  border: 1px solid currentColor;
+}
+
+.rwd-img {
+  inline-size: 20%;
+}
+
+.float-wrapper {
+  background-color: yellow;
+  display: flow-root;
+
+  div {
+    background-color: pink;
+    float: inline-start;
+    inline-size: 10%;
+    aspect-ratio: 1/1;
+  }
+}
+
+/* 미디어 쿼리 */
+/* 공통 스타일 */
+body {
+  background-color: sandybrown;
+
+  @media (min-width: 320px) {
+    background-color: blueviolet;
+  }
+
+  @media (min-width: 480px) {
+    background-color: gold;
+  }
+}
