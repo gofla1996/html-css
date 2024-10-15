@@ -1,0 +1,44 @@
+@import "./../../common/base.css";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.masonry-layout {
+  min-inline-size: 768px;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(200px, 1fr));
+  grid-row: auto;
+  gap: 1rem;
+  /* align-items: center; */
+
+  figure {
+    border: 1px solid currentColor;
+    position: relative;
+    align-content: center;
+    padding: 1rem;
+    margin: 0;
+  }
+
+  img {
+    max-inline-size: 100%;
+    display: block;
+    /* filter: grayscale(1); */
+    filter: brightness(0.6);
+    margin: 0;
+    &:hover {
+      filter: none;
+    }
+  }
+
+  figcaption {
+    background: rgba(0 0 0 /0.5);
+    position: absolute;
+    padding: 1rem;
+    color: #fff;
+    inset-inline: 0rem;
+    inset-block-end: 0rem;
+  }
+}
