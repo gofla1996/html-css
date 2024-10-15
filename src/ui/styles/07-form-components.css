@@ -1,0 +1,281 @@
+@import "./../../common/base.css";
+@import "./../../common/a11y.css";
+
+:root {
+  /*  색상 */
+  --dark-gray: #333;
+  --white: #fff;
+  --gray: #999;
+  --green: #03cf5d;
+  --silver: #dadada;
+  --black: #121212;
+  --light-blue: #e9f0fd;
+  --red: #ff1414;
+
+  /* 아이콘 크기 */
+  --size-sm: 0.75rem;
+  --size-base: 1rem;
+  --size-md: 1.25rem;
+  --size-lg: 1.5rem;
+
+  /* 글자 크기 */
+  --text-sm: 0.75rem;
+  --text-base: 0.875rem;
+  --text-md: 1rem;
+  --text-lg: 1.25rem;
+}
+
+/* 기본 박스 사이징 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* body 기본 스타일 */
+body {
+  --text-color: var(--black, #121212);
+
+  color: var(--text-color);
+}
+
+/* 로고 컴포넌트 */
+.brand {
+  margin: 0;
+  font-size: 1em;
+
+  a,
+  svg,
+  img {
+    display: block;
+  }
+}
+
+/* 링크 컴포넌트 (target="_blank") */
+.anchor--blank {
+  --text-color: var(--dark-gray, #333);
+
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* 체크박스 컴포넌트 (checkbox) */
+.checkbox {
+  position: relative;
+
+  .checkbox__input {
+    --icon-size: var(--size-lg, 1.5rem);
+
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    margin: 0;
+    inline-size: var(--icon-size);
+    aspect-ratio: 1/1;
+    appearance: none;
+  }
+
+  .checkbox__label {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .checkbox--area {
+    fill: var(--white, #fff);
+  }
+
+  .checkbox--border {
+    fill: var(--gray, #999);
+  }
+
+  .checkbox--mark {
+    fill: var(--gray, #999);
+  }
+
+  .checkbox__input:checked + .checkbox__label .checkbox--area,
+  .checkbox__input:checked + .checkbox__label .checkbox--border {
+    fill: var(--green, #03cf5d);
+  }
+
+  .checkbox__input:checked + .checkbox__label .checkbox--mark {
+    fill: var(--white, #fff);
+  }
+}
+
+/* 입력 서식 컴포넌트 (input) : 숨김 레이블 유형 */
+.input {
+  --border-color: var(--silver, #dadada);
+  --focus-bg-color: var(--light-blue, #e9f0fd);
+  --text-color: var(--dark-gray, #333);
+  --text-size: var(--text-base, 0.875rem);
+  --warning-text-color: var(--red, #ff1414);
+
+  font-size: var(--text-size);
+
+  .input__input {
+    border: 1px solid var(--border-color);
+    inline-size: 100%;
+    block-size: 3rem;
+    padding: 0.875rem;
+
+    &:user-invalid + .input__error-message span {
+      visibility: visible;
+    }
+
+    &:focus {
+      border: 1px solid var(--green);
+      background-color: var(--focus-bg-color);
+    }
+  }
+
+  .input__error-message {
+    color: var(--warning-text-color);
+    font-size: 0.75rem;
+    margin: 0.5rem 0 0 0;
+
+    span {
+      visibility: hidden;
+    }
+  }
+}
+
+/* 스위치 컴포넌트 (checkbox) */
+.switch {
+  --switch-active-color: var(--green, #03cf5d);
+  --switch-inactive-color: var(--gray, #999);
+
+  position: relative;
+  font-size: 0.875rem;
+  font-weight: 700;
+
+  .switch__input {
+    position: absolute;
+    inset-inline-start: 0;
+    inset-block-start: 0;
+    margin: 0;
+    inline-size: 2em;
+    block-size: 1rem;
+    appearance: none;
+  }
+
+  .switch__label {
+    display: block;
+    inline-size: 2em;
+    text-align: end;
+    color: var(--switch-inactive-label-color);
+
+    &::after {
+      content: "OFF";
+    }
+  }
+
+  .switch__input:checked + .switch__label::after {
+    content: "ON";
+    color: var(--switch-active-color);
+  }
+}
+
+/* 버튼 컴포넌트 */
+.button--primary {
+  --button-bg-color: var(--green, #03cf5d);
+  --button-text-color: var(--white, #fff);
+
+  background-color: var(--button-bg-color);
+  color: var(--button-text-color);
+  block-size: 3.5rem;
+  padding: 1rem;
+  border: 0;
+}
+
+/* 스위치 컴포넌트 (Codepen.io) */
+.ui-switch {
+  display: inline-block;
+  width: 45px;
+  height: 25px;
+  border: 1px solid #c7cad1;
+  border-radius: 14px;
+  background: #f9f9f9;
+  position: relative;
+  transition: background 0.3s;
+
+  .ui-switch-bubble {
+    transition: transform 0.3s;
+    width: 21px;
+    height: 21px;
+    position: absolute;
+    background: #fff;
+    border-radius: 50%;
+    left: 0px;
+    top: 1px;
+    box-shadow: 0px 1px 4px 0px rgba(16, 22, 39, 0.5);
+  }
+
+  &.ui-switch-active {
+    background: #37c04b;
+    border-color: #37c04b;
+    .ui-switch-bubble {
+      transform: translate3d(45px-24px, 0, 0);
+    }
+  }
+}
+
+.custom-switch {
+  --white: #fff;
+  --blue: #007bff;
+  --gray: #adb5bd;
+
+  --base-size: 1rem;
+  --switch-size: calc(var(--base-size) * var(--horizontal-ratio));
+  --horizontal-ratio: 3.5;
+  --vertical-ratio: 1.5;
+  --switch-active-bg-color: var(--blue);
+  --switch-inactive-bg-color: var(--white);
+  --switch-active-label-color: var(--white);
+  --switch-inactive-label-color: var(--gray);
+  --switch-active-border-color: var(--blue);
+  --switch-inactive-border-color: var(--gray);
+
+  --switch-padding: 0.125rem;
+
+  background-color: var(--switch-inactive-bg-color);
+  margin-top: 50px;
+  display: flex;
+  width: var(--switch-size);
+  aspect-ratio: calc(var(--horizontal-ratio) / var(--vertical-ratio));
+  border: 1px solid var(--switch-inactive-border-color);
+  box-sizing: border-box;
+  border-radius: calc(var(--switch-size) / var(--horizontal-ratio));
+  position: relative;
+  padding: var(--switch-padding);
+
+  input {
+    appearance: none;
+    position: absolute;
+    margin: 0;
+    inset: 0;
+  }
+
+  label {
+    flex-basis: calc(var(--switch-size) / var(--horizontal-ratio) - (var(--switch-padding) * 2));
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    background-color: var(--switch-inactive-label-color);
+    transition: all 0.4s;
+    position: relative;
+    left: 0;
+    right: initial;
+  }
+
+  &:has(:checked) {
+    background-color: var(--switch-active-bg-color);
+    border-color: var(--switch-active-border-color);
+  }
+
+  input:checked + label {
+    background-color: var(--switch-active-label-color);
+    left: initial;
+    left: 100%;
+    transform: translateX(-100%);
+  }
+}
