@@ -8,10 +8,10 @@ button {
 }
 
 .button--burger {
-  inline-size: 100px;
-  block-size: 100px;
+  inline-size: 24px;
+  block-size: 24px;
   position: relative;
-  background-color: var(--red);
+  background-color: transparent;
   border: 0;
   padding: 0;
   overflow: hidden;
@@ -20,10 +20,10 @@ button {
     position: absolute;
     inset-inline: 0;
     block-size: 20%;
-    background-color: var(--silver);
+    background-color: currentColor;
     border-radius: 100px;
 
-    transition: all 0.4s;
+    transition: all 0.2s;
   }
 
   .burger-bar-top {
@@ -32,27 +32,54 @@ button {
 
   .burger-bar-middle {
     inset-block-start: 50%;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
+    translate: 0 -50%;
   }
 
   .burger-bar-bottom {
     inset-block-start: 100%;
-    transform: translateY(-100%);
+    /* transform: translateY(-100%); */
+    translate: 0 -100%;
   }
 
   &:hover {
     .burger-bar-middle {
-      transform: translate(-120%, -50%);
+      /* transform: translate(-120%, -50%); */
+      translate: 120% -50%;
     }
 
     .burger-bar-top {
       inset-block-start: 50%;
-      transform: translateY(-50%) rotate(45deg);
+      /* transform: translateY(-50%) rotate(45deg); */
+      translate: 0 -50%;
+      rotate: -45deg;
     }
 
     .burger-bar-bottom {
       inset-block-start: 50%;
-      transform: translateY(-50%) rotate(-45deg);
+      /* transform: translateY(-50%) rotate(-45deg); */
+      translate: 0 -50%;
+      rotate: 45deg;
     }
+  }
+}
+
+@keyframes spinner {
+  0% {
+    rotate: 0deg;
+  }
+  100% {
+    rotate: 360deg;
+  }
+}
+
+.loading-spinner {
+  inline-size: 48px;
+  block-size: 48px;
+
+  color: lightskyblue;
+
+  svg {
+    animation: spinner 1s infinite steps(12);
   }
 }
