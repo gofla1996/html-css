@@ -1,0 +1,92 @@
+@import "./../../common/modern-reset.css";
+@import "./../../common/base.css";
+
+h1,
+h2 {
+  margin-block: 1rem;
+}
+
+@keyframes fadeEffect {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+/* CSS Animation */
+.fade-box {
+  inline-size: 150px;
+  block-size: 150px;
+  border: 1px solid var(--gray);
+  background-color: var(--red);
+  margin-block: 1rem;
+
+  text-align: center;
+  align-content: center;
+
+  @media (prefers-reduced-motion) {
+    animation-play-state: paused;
+  }
+
+  &.is--animation {
+    /* animation-name: fadeEffect;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+    animation-play-state: running; */
+    animation: fadeEffect 3s forwards infinite alternate ease-in-out running;
+
+    &.fade-box2 {
+      animation-delay: 2s;
+    }
+  }
+}
+
+/* Transition */
+.transition-box {
+  border: 1px solid var(--black);
+  background-color: var(--gray);
+  color: var(--white);
+  padding: 1rem;
+  inline-size: 300px;
+  margin-block: 20px;
+  /* 트랜지션은 hover가 아닌 그냥 클래스 요소에 들어가야 한다.   */
+  /* transition-property: color, background-color, transform;
+  transition-duration: 1s, 1s, 1s;
+  transition-delay: 0s, 1s, 2s; */
+  transform-origin: left top;
+  transform: translate(100px, 0);
+  transition: color 1s 0s, background-color 1s 1s, transform 1s 2s;
+  /* .transition-box:hover,
+  .transition-box  */
+
+  &.is--animation {
+    color: var(--red);
+    background-color: var(--yellow);
+    transform: scale(2) translate(100px, 0);
+    /* inline-size: 500px; */
+  }
+}
+
+/* Transform */
+.transform-box {
+  border: 1px solid var(--black);
+  background-color: var(--gray);
+  color: var(--white);
+  padding: 1rem;
+  inline-size: 300px;
+  margin-block: 20px;
+  margin-inline: auto;
+  transition: all 2s;
+  transform-origin: left top;
+
+  &.is--animation {
+    scale: 0.5;
+    translate: 100px, 0;
+    rotate: 3turn;
+  }
+}

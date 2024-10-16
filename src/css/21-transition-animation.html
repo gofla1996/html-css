@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transition, Animation | Techit</title>
+    <!-- Noto Serif -->
+    <link rel="preload" as="style" href="./../assets/font/notoserif/notoserif.css" />
+    <link rel="stylesheet" href="./../assets/font/notoserif/notoserif.css" />
+    <!-- Pretendard -->
+    <link rel="preload" as="style" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
+    <link rel="stylesheet" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
+    <!-- css 파일 -->
+    <link rel="stylesheet" href="./styles/21-transition-animation.css" />
+    <script type="module">
+      // Transition
+      const buttonTransition = document.querySelector(".button--transition");
+      const transitionBox = document.querySelector(".transition-box");
+
+      buttonTransition.addEventListener("click", () => {
+        transitionBox.classList.toggle("is--animation");
+      });
+
+      // Transform
+      const buttonTransform = document.querySelector(".button--transform");
+      const transformBox = document.querySelector(".transform-box");
+
+      buttonTransform.addEventListener("click", () => {
+        transformBox.classList.toggle("is--animation");
+      });
+
+      // Animation
+      const buttonAnimation = document.querySelector(".button--animation");
+      const fadeBoxes = document.querySelectorAll(".fade-box");
+
+      buttonAnimation.addEventListener("click", () => {
+        fadeBoxes.forEach((fadeBox) => {
+          fadeBox.classList.toggle("is--animation");
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <h1>CSS 애니메이션</h1>
+    <h2>Transition 속성을 활용한 애니메이션</h2>
+
+    <button type="button" class="button--transition">Go! 애니메이션</button>
+    <div class="transition-box">Transition을 활용한 애니메이션</div>
+
+    <button type="button" class="button--transform">Go! Transform</button>
+    <div class="transform-box">Transition을 활용한 애니메이션</div>
+
+    <h2>Animation 속성을 활용한 애니메이션</h2>
+    <button type="button" class="button--animation">Go! Animation</button>
+    <div class="fade-box fade-box1">CSS 애니메이션</div>
+    <div class="fade-box fade-box2">CSS 애니메이션</div>
+  </body>
+</html>
