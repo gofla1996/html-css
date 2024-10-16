@@ -1,0 +1,56 @@
+@import "./../../common/modern-reset.css";
+@import "./../../common/base.css";
+
+h1 {
+  margin-block: 1rem;
+}
+
+/* 카드 컴포넌트 */
+.card {
+  border: 1px solid var(--gray);
+  padding: 2rem;
+  display: flex;
+  flex-flow: column nowrap;
+  row-gap: 1rem;
+
+  figcaption {
+    display: contents;
+  }
+
+  strong {
+    font-size: 1.25rem;
+    color: var(--gray);
+  }
+
+  p {
+    font-size: 0.875rem;
+  }
+
+  img {
+    aspect-ratio: 1 / 0.6671875;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* 카드 컴포넌트 배치를 위한 레이아웃 */
+.card-wrapper {
+  background-color: var(--yellow);
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
+  gap: 1rem;
+
+  .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: subgrid;
+    grid-row: span 3;
+  }
+
+  /* img,
+  strong {
+    order: -1;
+  } */
+}
