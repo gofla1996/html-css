@@ -1,0 +1,70 @@
+@import "./../../common/mordern-reset.css";
+@import "./../../common/base.css";
+
+h1 {
+  margin-block: 1rem;
+}
+
+.grid-item1 {
+  background-color: var(--yellow);
+}
+.grid-item2 {
+  background-color: var(--pink);
+}
+.grid-item3 {
+  background-color: var(--blue);
+}
+.grid-item4 {
+  background-color: var(--green);
+}
+
+.grid-box {
+  border: 1px solid var(--green);
+  display: grid;
+  position: relative;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 50px);
+  background-color: var(--gray);
+  isolation: isolate;
+
+  .grid-item1 {
+    grid-row: 1 / span 2;
+    grid-column: 1 / span 2;
+    z-index: 1;
+  }
+
+  .grid-item2 {
+    grid-row: 2 / span 2;
+    grid-column: 2 / span 2;
+    /* z-index: 1; */
+  }
+
+  .grid-item3 {
+    position: absolute;
+    inset: 2rem;
+    z-index: -1;
+  }
+}
+
+/* 그리드 정렬 */
+.grid-wrapper {
+  border: 1px solid var(--red);
+  block-size: 400px;
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  grid-template-rows: repeat(5, 50px);
+  /* justify-items: center;
+  align-items: center; */
+  /* place-items: center; */
+
+  /* justify-content: center;
+  align-content: center; */
+  place-content: center;
+
+  .grid-item2 {
+    font-size: 1.5rem;
+    /* align-self: center;
+    justify-self: center; */
+    place-self: center;
+  }
+}

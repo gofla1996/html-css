@@ -1,3 +1,18 @@
+/* 색상 */
+:root {
+  --white: #fff;
+  --black: #121212;
+  --gray: #778899;
+  --silver: #d3d3d3;
+  --red: #ef5959;
+  --orange: #ffb37b;
+  --yellow: #feff94;
+  --green: #98fb98;
+  --blue: #83d9ef;
+  --violet: #ad64c5;
+  --pink: #facbf8;
+}
+
 /* 폼 요소 초기화 - 상속 */
 input,
 button,
@@ -6,7 +21,15 @@ textarea {
   font: inherit;
 }
 
-/* 기본 스타일 */
+/* 기본 박스 사이징 설정 */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* 본문 기본 글꼴 지정 */
 body {
   font-family: "Pretendard Variable", Pretendard, sans-serif;
+  margin: 50px;
 }
