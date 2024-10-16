@@ -1,0 +1,146 @@
+@import "./../../common/modern-reset.css";
+@import "./../../common/base.css";
+
+.header {
+  background-color: var(--yellow);
+}
+.navigation {
+  background-color: var(--pink);
+}
+.main-menu {
+  background-color: var(--green);
+}
+.main {
+  background-color: var(--blue);
+}
+.footer {
+  background-color: var(--orange);
+}
+.main section,
+.main article {
+  background-color: var(--violet);
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: [container-start] 1fr [content-start] repeat(12, minmax(54px, 1fr)) [content-end] 1fr [container-end];
+  grid-template-rows: repeat(5, auto);
+  column-gap: 1.5rem;
+
+  .header {
+    grid-column: content;
+    block-size: 12vh;
+  }
+
+  .navigation {
+    block-size: 16vh;
+    grid-column: container;
+    display: grid;
+    grid-template-columns: subgrid;
+
+    .main-menu {
+      grid-column: content;
+    }
+  }
+
+  .main {
+    grid-row: 3 / 5;
+    grid-column: container;
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: subgrid;
+    row-gap: 1rem;
+
+    section,
+    article {
+      block-size: 25svh;
+    }
+
+    .book {
+      grid-row: 1;
+      grid-column: 2 / span 4;
+    }
+    .news {
+      grid-row: 1;
+      grid-column: 6 / span 8;
+    }
+    .board {
+      grid-row: 2;
+      grid-column: 2 / span 4;
+    }
+    .favorite {
+      grid-row: 2;
+      grid-column: 6 / span 4;
+    }
+    .twitter {
+      grid-row: 2;
+      grid-column: 10 / span 4;
+    }
+  }
+
+  .footer {
+    grid-column: container;
+    text-align: center;
+    align-content: center;
+    block-size: 12vh;
+  }
+}
+
+/* .container {
+  background-color: darkkhaki;
+  display: grid;
+  grid-template-columns: [container-start] 54px [content-start] repeat(12, 1fr) [content-end] 54px [container-end];
+  grid-template-rows: [header-start] 10% 20% [header-end] [main-start] 55% 20% [main-end] 5%;
+  column-gap: 24px;
+  block-size: 100%;
+}
+
+.header {
+  background-color: var(--yellow);
+  grid-column: content;
+}
+
+.navigation {
+  background-color: tomato;
+  grid-column: container;
+}
+
+.main {
+  background-color: var(--pink);
+  grid-column: content;
+  display: grid;
+}
+
+.book {
+  background-color: var(--green);
+  grid-column: 2 span;
+}
+
+.news {
+  background-color: var(--blue);
+  grid-column: 4 span;
+}
+
+.board {
+  background-color: var(--silver);
+  grid-column: 6 span;
+}
+
+.favorite {
+  background-color: var(--orange);
+  grid-column: 8 span;
+}
+
+.twitter {
+  background-color: var(--violet);
+}
+
+.footer {
+  background-color: var(--gray);
+  grid-column: 1 / -1;
+} */
