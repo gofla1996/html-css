@@ -7,6 +7,105 @@ button {
   margin-block: 1rem;
 }
 
+/* 혼자 만든 예시 */
+.button-flex--burger {
+  inline-size: 50px;
+  block-size: 50px;
+  position: relative;
+  background-color: transparent;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+
+  .burger-bar-flex {
+    inline-size: 100%;
+    block-size: 20%;
+    background-color: midnightblue;
+    border-radius: 100px;
+
+    transition: all 0.2s;
+  }
+
+  .burger-bar-flex-top {
+    align-self: flex-start;
+  }
+
+  .burger-bar-flex-middle {
+    align-self: center;
+  }
+
+  .burger-bar-flex-bottom {
+    align-self: flex-end;
+  }
+
+  &:hover {
+    .burger-bar-flex-top {
+      margin-block: 50% -50%;
+      translate: 0 -50%;
+      rotate: -45deg;
+    }
+
+    .burger-bar-flex-middle {
+      translate: 120% 0;
+    }
+
+    .burger-bar-flex-bottom {
+      margin-block: -50% 50%;
+      translate: 0 50%;
+      rotate: 45deg;
+    }
+  }
+}
+
+/* 강사님 예시 */
+/* .button-flex--burger {
+  inline-size: 50px;
+  block-size: 50px;
+  position: relative;
+  background-color: gray;
+  border: 0;
+  padding: 0;
+  overflow: hidden;
+
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+
+  .burger-bar-flex {
+    inline-size: 100%;
+    block-size: 20%;
+    background-color: midnightblue;
+    border-radius: 100px;
+
+    transition: all 0.2s;
+  }
+
+  .burger-bar-flex-top {
+  }
+
+  .burger-bar-flex-middle {
+  }
+
+  .burger-bar-flex-bottom {
+  }
+
+  &:hover {
+    .burger-bar-flex-top {
+      translate: ;
+    }
+
+    .burger-bar-flex-middle {
+    }
+
+    .burger-bar-flex-bottom {
+    }
+  }
+} */
+
 .button--burger {
   inline-size: 24px;
   block-size: 24px;
