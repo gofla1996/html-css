@@ -42,3 +42,49 @@
     inset-block-end: 0rem;
   }
 }
+
+/* 
+@import "./../../common/modern-reset.css";
+@import "./../../common/base.css";
+
+.masonry-layout {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+
+  .span-2 {
+    grid-row: span 2;
+
+    img {
+      aspect-ratio: 1 / 1.5;
+    }
+  }
+}
+
+.card {
+  border: 1px solid var(--gray);
+  padding: 1rem;
+  position: relative;
+
+  img {
+    aspect-ratio: 1 / 0.67;
+    object-fit: cover;
+    filter: sepia();
+
+    &:hover {
+      filter: none;
+    }
+  }
+
+  figcaption {
+    background: rgba(0 0 0 / 0.5);
+    backdrop-filter: blur(10px);
+    padding: 1rem;
+    color: var(--white);
+    position: absolute;
+    inset-inline: 1rem;
+    inset-block-end: 1rem;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+} */
