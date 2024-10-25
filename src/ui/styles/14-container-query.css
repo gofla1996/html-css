@@ -1,0 +1,105 @@
+@import "./../../common/modern-reset.css";
+@import "./../../common/base.css";
+
+/* 다크모드 설정 */
+/* @media (prefers-color-scheme: dark) {
+  ...
+} */
+
+:root {
+  color-scheme: light dark;
+}
+
+body {
+  color: light-dark(var(--gray), var(--white));
+  background-color: light-dark(var(--white), var(--gray));
+}
+
+h1,
+p {
+  line-height: 1.5;
+}
+
+h1 {
+  margin-block: 1rem;
+}
+
+p:not(.card__description) {
+  margin-block: 1rem;
+}
+
+/* 카드 컴포넌트 */
+.card-wrapper {
+  container: card-wrapper / inline-size;
+}
+
+.card {
+  display: grid;
+  grid-template: "image" "description" / minmax(260px, 1fr);
+  border: 1px solid var(--gray);
+  padding: 1rem;
+  gap: 1rem;
+  color: light-dark(var(--gray), var(--gray));
+  background-color: light-dark(var(--green), var(--pink));
+
+  .card__image {
+    grid-area: image;
+    text-align: center;
+
+    .card__link {
+      text-decoration: none;
+      color: inherit;
+      font-style: italic;
+    }
+  }
+
+  .card__description {
+    grid-area: description;
+  }
+}
+
+@container (inline-size > 30rem) {
+  .card {
+    grid-template: "image description" / 1fr 2fr;
+
+    .card__description {
+      /* 크기 변경 확인 필요 */
+      /* font-size: clamp(12px, 10cqi, 30px); */
+    }
+  }
+}
+
+@container (inline-size > 50rem) {
+  .card {
+    grid-template: "image description" / 2fr 1fr;
+
+    .card__description {
+      font-size: clamp(14px, 2cqi, 24px);
+    }
+  }
+}
+
+/* 카드 레이아웃 */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.card-floating {
+  display: flow-root;
+
+  .card-wrapper {
+    inline-size: 60%;
+    float: inline-start;
+    margin: 0 1rem 1rem 0;
+  }
+
+  p {
+    font-size: 1.5rem;
+
+    &:nth-of-type(1) {
+      margin-block-start: 0;
+    }
+  }
+}

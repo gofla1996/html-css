@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="ko-KR" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Container Query| Techit</title>
+    <!-- <link rel="icon" href="./../assets/favicon/sun-cloud.svg" /> -->
+    <link rel="icon" href="./../assets/favicon/moon.svg" />
+    <!-- <link rel="icon" href="./../assets/favicon/moon.svg" media="(prefers-color-scheme: dark)" /> -->
+    <link rel="preload" as="style" href="./../assets/font/notoserif/notoserif.css" />
+    <link rel="stylesheet" href="./../assets/font/notoserif/notoserif.css" />
+    <link rel="preload" as="style" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
+    <link rel="stylesheet" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
+
+    <link rel="stylesheet" href="./styles/14-container-query.css" />
+  </head>
+  <body>
+    <h1>Container Queries</h1>
+
+    <p>
+      컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변
+      컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는
+      뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을 적용하는 미디어 쿼리 의 대안입니다.
+    </p>
+
+    <div class="cards">
+      <div class="card-wrapper">
+        <div class="card">
+          <figure class="card__image">
+            <img src="./../assets/container-query/book.jpg" alt="" />
+            <figcaption class="card__caption">
+              <a
+                class="card__link"
+                href="https://unsplash.com/ko/%EC%82%AC%EC%A7%84/mIVpbn8j-6w"
+                target="_blank"
+                rel="noopenner noreferrer"
+                >Unsplash - Book</a
+              >
+            </figcaption>
+          </figure>
+          <p class="card__description">
+            컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변
+            컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너
+            쿼리는 뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을 적용하는 미디어 쿼리 의 대안입니다.
+          </p>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card">
+          <figure class="card__image">
+            <img src="./../assets/container-query/coffee.jpg" alt="" />
+            <figcaption class="card__caption">
+              <a
+                class="card__link"
+                href="https://unsplash.com/ko/%EC%82%AC%EC%A7%84/tNALoIZhqVM"
+                target="_blank"
+                rel="noopenner noreferrer"
+                >Unsplash - Coffee</a
+              >
+            </figcaption>
+          </figure>
+          <p class="card__description">
+            컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변
+            컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너
+            쿼리는 뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을 적용하는 미디어 쿼리 의 대안입니다.
+          </p>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card">
+          <figure class="card__image">
+            <img src="./../assets/container-query/burger.jpg" alt="" />
+            <figcaption class="card__caption">
+              <a
+                class="card__link"
+                href="https://unsplash.com/ko/%EC%82%AC%EC%A7%84/PxJ9zkM2wdA"
+                target="_blank"
+                rel="noopenner noreferrer"
+                >Unsplash - Burger</a
+              >
+            </figcaption>
+          </figure>
+          <p class="card__description">
+            컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변
+            컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너
+            쿼리는 뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을 적용하는 미디어 쿼리 의 대안입니다.
+          </p>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card">
+          <figure class="card__image">
+            <img src="./../assets/container-query/camera.jpg" alt="" />
+            <figcaption class="card__caption">
+              <a
+                class="card__link"
+                href="https://unsplash.com/ko/%EC%82%AC%EC%A7%84/HDIUUSO5C8g"
+                target="_blank"
+                rel="noopenner noreferrer"
+                >Unsplash - Camera</a
+              >
+            </figcaption>
+          </figure>
+          <p class="card__description">
+            컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변
+            컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너
+            쿼리는 뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을 적용하는 미디어 쿼리 의 대안입니다.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <p>
+      컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변
+      컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는
+      뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을 적용하는 미디어 쿼리 의 대안입니다.
+    </p>
+
+    <p>
+      컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변
+      컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는
+      뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을 적용하는 미디어 쿼리 의 대안입니다.
+    </p>
+
+    <div class="card-wrapper">
+      <div class="card">
+        <figure class="card__image">
+          <img src="./../assets/container-query/book.jpg" alt="" />
+          <figcaption class="card__caption">
+            <a
+              class="card__link"
+              href="https://unsplash.com/ko/%EC%82%AC%EC%A7%84/mIVpbn8j-6w"
+              target="_blank"
+              rel="noopenner noreferrer"
+              >Unsplash - Book</a
+            >
+          </figcaption>
+        </figure>
+        <p class="card__description">
+          컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변
+          컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는
+          뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을 적용하는 미디어 쿼리 의 대안입니다.
+        </p>
+      </div>
+    </div>
+
+    <p>
+      컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변
+      컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는
+      뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을 적용하는 미디어 쿼리 의 대안입니다.
+    </p>
+
+    <p>
+      컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변
+      컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는
+      뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을 적용하는 미디어 쿼리 의 대안입니다.
+    </p>
+
+    <div class="card-floating">
+      <div class="card-wrapper">
+        <div class="card">
+          <figure class="card__image">
+            <img src="./../assets/container-query/camera.jpg" alt="" />
+            <figcaption class="card__caption">
+              <a
+                class="card__link"
+                href="https://unsplash.com/ko/%EC%82%AC%EC%A7%84/HDIUUSO5C8g"
+                target="_blank"
+                rel="noopenner noreferrer"
+                >Unsplash - Camera</a
+              >
+            </figcaption>
+          </figure>
+          <p class="card__description">
+            컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변
+            컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너
+            쿼리는 뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을 적용하는 미디어 쿼리 의 대안입니다.
+          </p>
+        </div>
+      </div>
+
+      <p>
+        컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변
+        컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는
+        뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을 적용하는 미디어 쿼리 의 대안입니다.
+      </p>
+
+      <p>
+        컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변
+        컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는
+        뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을 적용하는 미디어 쿼리 의 대안입니다.
+      </p>
+
+      <p>
+        컨테이너 쿼리를 사용하면 요소 컨테이너의 크기에 따라 요소에 스타일을 적용할 수 있습니다. 예를 들어, 컨테이너가 주변
+        컨텍스트에서 사용할 수 있는 공간이 더 적은 경우 특정 요소를 숨기거나 더 작은 글꼴을 사용할 수 있습니다. 컨테이너 쿼리는
+        뷰포트 크기나 기타 장치 특성을 기반으로 요소에 스타일을 적용하는 미디어 쿼리 의 대안입니다.
+      </p>
+    </div>
+  </body>
+</html>
