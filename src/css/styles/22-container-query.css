@@ -1,0 +1,80 @@
+@import "./../../common/mordern-reset.css";
+@import "./../../common/a11y.css";
+@import "./../../common/base.css";
+
+/* 슬라이더 컴포넌트 */
+.slider-wrapper {
+  margin-block: 1rem;
+}
+
+.container {
+  padding: 1rem;
+  border: 1px solid var(--red);
+  container-type: inline-size;
+  container-name: container;
+}
+
+/* 카드 컴포넌트 */
+.card-wrapper {
+  container-type: inline-size;
+  container-name: wrapper;
+  inline-size: 50%;
+}
+
+.card {
+  border: 1px solid var(--gray);
+  padding: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 1rem;
+
+  img {
+    aspect-ratio: 1 / 0.67;
+    object-fit: cover;
+  }
+
+  figcaption {
+    margin-block-start: 0.5rem;
+    text-align: center;
+  }
+}
+
+@container wrapper (inline-size > 30rem) {
+  .card {
+    flex-direction: row;
+
+    figure {
+      flex: 1;
+    }
+
+    p {
+      flex: 1;
+    }
+  }
+}
+
+@container wrapper (inline-size > 50rem) {
+  .card {
+    flex-direction: row;
+
+    figure {
+      flex: 1;
+    }
+
+    p {
+      &:nth-of-type(1) {
+        flex: 1;
+      }
+
+      &:nth-of-type(2) {
+        flex: 2;
+      }
+    }
+  }
+}
+
+/* 그리드 레이아웃 */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}

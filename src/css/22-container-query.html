@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Container Query| Techit</title>
+    <link rel="preload" as="style" href="./../assets/font/notoserif/notoserif.css" />
+    <link rel="stylesheet" href="./../assets/font/notoserif/notoserif.css" />
+    <link rel="preload" as="style" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
+    <link rel="stylesheet" href="./../assets/font/pretendard/pretendardvariable-dynamic-subset.css" />
+
+    <link rel="stylesheet" href="./styles/22-container-query.css" />
+    <script type="module">
+      const slider = document.querySelector(".slider");
+      const container = document.querySelector(".container");
+
+      slider.addEventListener("input", () => {
+        const sliderValue = slider.value + "px";
+        container.style.inlineSize = sliderValue;
+      });
+    </script>
+  </head>
+  <body>
+    <h1>컨테이너 쿼리</h1>
+
+    <!-- 카드 컴포넌트 크기 변경을 위한 슬라이더 -->
+    <div class="slider-wrapper">
+      <label for="slider" class="sr-only">슬라이더</label>
+      <input type="range" class="slider" id="slider" value="300" min="300" max="2000" />
+    </div>
+    <!-- 카드 컴포넌트 -->
+    <div class="container">
+      <div class="card-wrapper">
+        <div class="card">
+          <figure>
+            <img src="./../assets/container-query/coffee.jpg" alt="" />
+            <figcaption>Coffee</figcaption>
+          </figure>
+          <p>멋쟁이 사자처럼의 태킷 스쿨과 바른 교육 이듬이 만났습니다. 유익하고 재미있는 프론트엔드 수업이 될 수 있도록 우리 모두 화이팅 해보아요!</p>
+          <p>
+            '함께 성장하는 바른 교육' 이듬(EUID)과 멋쟁이 사자처럼 태킷(Techit) 스쿨이 만났습니다. '이듬' 교육이 지향하는 비전은 동반 성장에 있습니다. 강사에서 수강생으로 한 방향으로 흘러가는 지식 전달이 아닌, 함께 공감하고 이해하며 경험하는 교육 가치를 통해 공동의 혁신을 이끌어내는 것을 목표로 합니다. 멋쟁이 사자처럼 태킷 스쿨은 '함께'의 가치를 중요하게 생각합니다. 5년이 지나도, 10년이 지나도 IT 업계에 필요한 인재를 육성하는 교육을 제공하고, 기업의 HRD 파트너로 존재할 것이며 국내 대표 IT 교육
+            회사인 만큼 더 좋은 교육이 무엇인지를 끊임없이 고민하는 회사로 자리매김할 것입니다.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- 카드 컴포넌트를 배치하기 위한 그리드 레이아웃 -->
+    <!-- <div class="grid-container">
+      <div class="card-wrapper">
+        <div class="card">
+          <figure>
+            <img src="./../assets/container-query/coffee.jpg" alt="" />
+            <figcaption>Coffee</figcaption>
+          </figure>
+          <p>멋쟁이 사자처럼의 태킷 스쿨과 바른 교육 이듬이 만났습니다. 유익하고 재미있는 프론트엔드 수업이 될 수 있도록 우리 모두 화이팅 해보아요!</p>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card">
+          <figure>
+            <img src="./../assets/container-query/book.jpg" alt="" />
+            <figcaption>Coffee</figcaption>
+          </figure>
+          <p>멋쟁이 사자처럼의 태킷 스쿨과 바른 교육 이듬이 만났습니다. 유익하고 재미있는 프론트엔드 수업이 될 수 있도록 우리 모두 화이팅 해보아요!</p>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card">
+          <figure>
+            <img src="./../assets/container-query/burger.jpg" alt="" />
+            <figcaption>Coffee</figcaption>
+          </figure>
+          <p>멋쟁이 사자처럼의 태킷 스쿨과 바른 교육 이듬이 만났습니다. 유익하고 재미있는 프론트엔드 수업이 될 수 있도록 우리 모두 화이팅 해보아요!</p>
+        </div>
+      </div>
+      <div class="card-wrapper">
+        <div class="card">
+          <figure>
+            <img src="./../assets/container-query/camera.jpg" alt="" />
+            <figcaption>Coffee</figcaption>
+          </figure>
+          <p>멋쟁이 사자처럼의 태킷 스쿨과 바른 교육 이듬이 만났습니다. 유익하고 재미있는 프론트엔드 수업이 될 수 있도록 우리 모두 화이팅 해보아요!</p>
+        </div>
+      </div>
+    </div> -->
+  </body>
+</html>
